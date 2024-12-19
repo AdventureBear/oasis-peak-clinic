@@ -39,7 +39,7 @@ export function AppointmentModal() {
                 <DialogHeader>
                     <DialogTitle>Add New Appointment</DialogTitle>
                     <DialogDescription>
-                        Enter the details for the new appointment here. Click save when you're done.
+                        Enter the details for the new appointment here. Click save when you&#39;re done.
                     </DialogDescription>
                 </DialogHeader>
                 <div className="grid gap-4 py-4">

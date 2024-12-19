@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
-import { Pill, Activity, Droplet, Users, User, Syringe, ClipboardList, AlertTriangle } from 'lucide-react'
+import { Pill, Activity, Users, User, Syringe, ClipboardList, AlertTriangle } from 'lucide-react'
 import {AIScribeModal} from "@/app/encounters/components/AIScribeModal";
 import {toast} from "@/hooks/use-toast";
 import {EncounterModal} from "@/app/encounters/components/EncounterModal";

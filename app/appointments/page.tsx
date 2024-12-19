@@ -1,10 +1,12 @@
 'use client'
 
 import React, { useState } from 'react'
-import { format, addMinutes, isSameDay, setHours, setMinutes } from 'date-fns'
+import { format, addMinutes, isSameDay, setHours,  } from 'date-fns'
 import { Calendar } from '@/components/ui/calendar'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { AppointmentModal } from './components/AppointmentModal'
+import {Appointment} from "@/types/types";
+
 
 const doctors = [
     { id: 1, name: "Dr. John Smith" },
@@ -48,7 +50,7 @@ export default function AppointmentsPage() {
         )
     }
 
-    const getAppointmentColor = (appointment: any) => {
+    const getAppointmentColor = (appointment: Appointment): string => {
         if (appointment.isBreak) {
             return appointment.patientName === "Lunch Break" ? "bg-yellow-200" : "bg-gray-200"
         }
@@ -102,7 +104,7 @@ export default function AppointmentsPage() {
                                                 </td>
                                                 {doctors.map(doctor => (
                                                     <td key={doctor.id} className="px-2 py-2 whitespace-nowrap text-sm text-gray-500 relative h-12">
-                                                        {getAppointmentsForSlot(hour, doctor.id).map((apt: any) => (
+                                                        {getAppointmentsForSlot(hour, doctor.id).map((apt: Appointment) => (
                                                             <div
                                                                 key={apt.id}
                                                                 className={`${getAppointmentColor(apt)} absolute left-0 right-0 rounded-sm overflow-hidden`}

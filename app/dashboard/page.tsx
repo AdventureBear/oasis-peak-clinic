@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { format, addMinutes } from 'date-fns'
+import { format } from 'date-fns'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, Mail, FileText, ClipboardList, ShieldCheck } from 'lucide-react'
@@ -83,7 +83,7 @@ export default function DashboardPage() {
                     <CardHeader>
                         <CardTitle className="flex items-center">
                             <Calendar className="mr-2" />
-                            Today's Schedule
+                            Today&#39;s Schedule
                         </CardTitle>
                         <CardDescription>{format(currentDate, 'MMMM d, yyyy')}</CardDescription>
                     </CardHeader>
